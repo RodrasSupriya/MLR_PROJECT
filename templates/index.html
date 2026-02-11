@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House Price Prediction</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<style>
+body{
+background:linear-gradient(135deg,#1f4037,#99f2c8);
+font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+.container-box{
+background:white;
+padding:30px;
+margin-top:40px;
+border-radius:12px;
+box-shadow:0px 10px 25px rgba(0,0,0,0.25);
+}
+
+h1{
+font-weight:600;
+color:#2c3e50;
+margin-bottom:25px;
+}
+
+.form-control{
+border-radius:6px;
+margin-bottom:12px;
+}
+
+.btn-predict{
+background:#1abc9c;
+border:none;
+font-weight:600;
+}
+.btn-predict:hover{
+background:#16a085;
+}
+
+.result-box{
+margin-top:25px;
+padding:18px;
+background:#ecfdf5;
+border-radius:10px;
+font-size:26px;
+font-weight:600;
+color:#14532d;
+text-align:center;
+box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="container-box">
+
+<h1 class="text-center">House Price Prediction</h1>
+
+<form action="/predict" method="POST">
+
+<div class="row">
+
+<div class="col-md-6">
+<input type="number" step="any" name="bedrooms" class="form-control" placeholder="Bedrooms">
+<input type="number" step="any" name="bathrooms" class="form-control" placeholder="Bathrooms">
+<input type="number" name="sqft_living" class="form-control" placeholder="Sqft Living">
+<input type="number" name="sqft_lot" class="form-control" placeholder="Sqft Lot">
+<input type="number" step="any" name="floors" class="form-control" placeholder="Floors">
+<input type="number" name="waterfront" class="form-control" placeholder="Waterfront (0 or 1)">
+<input type="number" name="view" class="form-control" placeholder="View">
+<input type="number" name="condition" class="form-control" placeholder="Condition">
+</div>
+
+<div class="col-md-6">
+<input type="number" name="sqft_above" class="form-control" placeholder="Sqft Above">
+<input type="number" name="sqft_basement" class="form-control" placeholder="Sqft Basement">
+<input type="number" name="yr_built" class="form-control" placeholder="Year Built">
+<input type="number" name="yr_renovated" class="form-control" placeholder="Year Renovated">
+<input type="number" name="city" class="form-control" placeholder="City Code">
+<input type="number" name="country" class="form-control" placeholder="Country Code">
+<input type="number" name="day" class="form-control" placeholder="Day">
+<input type="number" name="month" class="form-control" placeholder="Month">
+<input type="number" name="year" class="form-control" placeholder="Year">
+</div>
+
+</div>
+
+<button type="submit" class="btn btn-predict btn-block">Predict Price</button>
+
+</form>
+
+<div class="result-box">
+{{ prediction_text }}
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
