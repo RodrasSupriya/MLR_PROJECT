@@ -58,15 +58,7 @@ year
 Target Variable:
 
 price
-🧠 Model Description
 
-The Multiple Linear Regression model follows the equation:
-
-​
-
- → Input features
-
-The coefficients are calculated manually using statistical formulas
 ⚙️ Technologies Used
 
 Python
