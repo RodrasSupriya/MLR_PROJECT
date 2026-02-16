@@ -56,8 +56,10 @@ House-Price-Prediction/
 
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
+
 git clone https://github.com/your-username/house-price-prediction.git
 cd house-price-prediction
+
 
 2️⃣ Create Virtual Environment (Optional but Recommended)
 python -m venv venv
